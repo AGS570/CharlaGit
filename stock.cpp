@@ -27,10 +27,21 @@ void stock::cargaLista() {
   file.close();
 }
 
-void mostrarLista() {
+void stock::mostrarLista() {
 
   for (producto p : list.product){
     p.mostrar();
   }
 }
 
+int stock::activoTotal(){
+  int total =0;
+  for (producto p: list.product){
+    total += p.activo();
+  }
+  return total;
+}
+
+void stock::ordenar(){
+  
+}

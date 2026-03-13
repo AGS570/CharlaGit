@@ -19,6 +19,10 @@ public:
 
   void cargaLista();
   void mostrarLista();
+  int activoTotal();
+  void ordenar();
 }
 
+
+;
 #endif

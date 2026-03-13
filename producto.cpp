@@ -11,3 +11,7 @@ int producto::activo(){
     res =  precio * unidades;
     return res;
 }
+
+int producto::getCodigo(){
+    return codigo;
+}

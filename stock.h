@@ -15,7 +15,9 @@ private:
   tLista list;
 
 public:
-  stock() { list.contador = 0; }
+  stock() {
+    list.contador = 0; 
+  }
 
   void cargaLista();
   void mostrarLista();

@@ -29,19 +29,32 @@ void stock::cargaLista() {
 
 void stock::mostrarLista() {
 
-  for (producto p : list.product){
-    p.mostrar();
+  for (int i =0; i < list.contador;i++){
+    list.product[i].mostrar();
   }
 }
 
 int stock::activoTotal(){
   int total =0;
-  for (producto p: list.product){
-    total += p.activo();
+  for (int i =0; i < list.contador;i++){
+    total += list.product[i].activo();
   }
   return total;
 }
 
 void stock::ordenar(){
-  
+  bool done = false;
+  producto aux;
+  for(int i =1; i <  list.contador ;i++){
+    while(!done){
+      if(list.product[i].getCodigo() < list.product[i-1].getCodigo()){
+        aux = list.product[i-1];
+        list.product[i-1 ] = list.product[i];
+        list.product[i] = aux;
+      }else if(list.product[i].getCodigo() > list.product[i-1].getCodigo()){
+        done = true;
+      }
+    }
+    done = false;
+  }
 }

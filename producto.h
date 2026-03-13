@@ -13,7 +13,12 @@ private:
   int unidades;
 
 public:
-  producto();
+  producto(){
+    codigo = 0;
+    nombre = "";
+    precio = 0.0;
+    unidades = 0;
+  }
 
   producto(int cod, std::string name, float prize, int uds) {
     codigo = cod;
@@ -23,7 +28,7 @@ public:
   }
 
   void mostrar();
-
+  int getCodigo();
   int activo();
 }
 
